@@ -1,0 +1,355 @@
+/* Base animation setup */
+
+
+/* © 2025 Reem Nawaf — All Rights Reserved.
+   Unauthorized copying or reuse is strictly prohibited. */
+
+[data-animate] {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
+}
+
+
+/* Fade In Up Animation */
+
+[data-animate="fadeInUp"] {
+    transform: translateY(50px);
+}
+
+[data-animate="fadeInUp"].animate-in {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Fade In Left Animation */
+
+[data-animate="fadeInLeft"] {
+    transform: translateX(-50px);
+}
+
+[data-animate="fadeInLeft"].animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+/* Fade In Right Animation */
+
+[data-animate="fadeInRight"] {
+    transform: translateX(50px);
+}
+
+[data-animate="fadeInRight"].animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+/* Scale In Animation */
+
+[data-animate="scaleIn"] {
+    transform: scale(0.8);
+}
+
+[data-animate="scaleIn"].animate-in {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* Slide In Up Animation */
+
+[data-animate="slideInUp"] {
+    transform: translateY(100px);
+}
+
+[data-animate="slideInUp"].animate-in {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Scroll-based animations */
+
+[data-scroll] {
+    will-change: transform, opacity;
+}
+
+[data-scroll="parallax"] {
+    transition: none;
+}
+
+[data-scroll="fade"] {
+    transition: opacity 0.3s ease-out;
+}
+
+[data-scroll="slide"] {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+
+/* Hover animations */
+
+[data-hover] {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+[data-hover="lift"]:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-hover="scale"]:hover {
+    transform: scale(1.05);
+}
+
+[data-hover="rotate"]:hover {
+    transform: rotate(5deg);
+}
+
+
+/* Stagger animation delays */
+
+.project-card:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 150ms;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 300ms;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 450ms;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 600ms;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 750ms;
+}
+
+.project-card:nth-child(7) {
+    animation-delay: 900ms;
+}
+
+.project-card:nth-child(8) {
+    animation-delay: 1050ms;
+}
+
+.project-card:nth-child(9) {
+    animation-delay: 1200ms;
+}
+
+.project-card:nth-child(10) {
+    animation-delay: 1350ms;
+}
+
+
+/* Smooth scrolling for the entire page */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Enhanced project cards with better hover effects */
+
+.project-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Hero section parallax background */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(80, 200, 120, 0.1) 100%);
+    will-change: transform;
+}
+
+
+/* Section animations */
+
+.section-header {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section-header.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Tech grid animations */
+
+.tech-item {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+}
+
+
+/* اخفي العناصر قبل ما تدخل الحاوية */
+
+.about-skills:not(.animate-in) .tech-item {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+/* لما الحاوية تاخذ animate-in تظهر العناصر */
+
+.about-skills.animate-in .tech-item {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+
+/* ستاجر اختياري */
+
+.about-skills.animate-in .tech-item:nth-child(1) {
+    transition-delay: 0ms;
+}
+
+.about-skills.animate-in .tech-item:nth-child(2) {
+    transition-delay: 80ms;
+}
+
+.about-skills.animate-in .tech-item:nth-child(3) {
+    transition-delay: 160ms;
+}
+
+.about-skills.animate-in .tech-item:nth-child(4) {
+    transition-delay: 240ms;
+}
+
+.about-skills.animate-in .tech-item:nth-child(5) {
+    transition-delay: 320ms;
+}
+
+.about-skills.animate-in .tech-item:nth-child(6) {
+    transition-delay: 400ms;
+}
+
+.tech-item.animate-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.tech-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Button animations */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Loading animation for images */
+
+.image-placeholder {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+/* Responsive animations */
+
+@media (max-width: 768px) {
+    [data-animate] {
+        transition-duration: 0.6s;
+    }
+    .project-card:hover {
+        transform: translateY(-10px) scale(1.01);
+    }
+    [data-hover="lift"]:hover {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Reduce motion for accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    [data-scroll="parallax"] {
+        transform: none !important;
+    }
+}

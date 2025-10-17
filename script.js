@@ -47,7 +47,6 @@ const translations = {
         // Contact Section
         contactTitle: "تواصل معي",
         contactSubtitle: "دعنا نتحدث حول مشروعك القادم",
-        phone: "الهاتف",
         downloadResume: "تحميل السيرة الذاتية",
         name: "الاسم",
         message: "الرسالة",
@@ -104,7 +103,6 @@ const translations = {
         contactQuickTitle: "طرق التواصل",
         contactQuickSubtitle: "بياناتي المباشرة للتواصل السريع",
         emailLabel: "البريد الإلكتروني",
-        phoneLabel: "رقم الجوال",
         linkedinLabel: "لينكدإن",
         copy: "نسخ",
         copied: "تم النسخ!",
@@ -332,7 +330,6 @@ const translations = {
         // Contact Section
         contactTitle: "Contact Me",
         contactSubtitle: "Let's talk about your next project",
-        phone: "Phone",
         downloadResume: "Download Resume",
         name: "Name",
         message: "Message",
@@ -387,7 +384,6 @@ const translations = {
         contactQuickTitle: "Contact Methods",
         contactQuickSubtitle: "My direct info for quick contact",
         emailLabel: "Email",
-        phoneLabel: "Phone",
         linkedinLabel: "LinkedIn",
         copy: "Copy",
         copied: "Copied!",
